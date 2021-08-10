@@ -1,8 +1,8 @@
 'use srtict'
 
 let container = document.getElementById('branches');
-let table = document.createElement('table');
-container.appendChild(table);
+let tableEl = document.createElement('table');
+container.appendChild(tableEl);
 
 const workHours = ['6am','7am','8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm'];
 
@@ -45,7 +45,7 @@ function shops(shopLocation, min, max, avgCookieSale) {
     //render the hours in header
     function createTableHeader() {
         let header = document.createElement('tr');
-        table.appendChild(header);
+        tableEl.appendChild(header);
         let thEl1 = document.createElement('th');
         header.appendChild(thEl1);
         thEl1.textContent = 'Work hours';
@@ -63,7 +63,7 @@ function shops(shopLocation, min, max, avgCookieSale) {
     //render function for the table content
     shops.prototype.render = function (){
         let shop = document.createElement('tr');
-        table.appendChild(shop);
+        tableEl.appendChild(shop);
         let tdEl1 = document.createElement('td');
         shop.appendChild(tdEl1);
         tdEl1.textContent = this.shopLocation;
@@ -84,7 +84,7 @@ function shops(shopLocation, min, max, avgCookieSale) {
         let totalOfsoldCookiesInAllShopsPerHouer = 0;
         let soldCookiesInAllShopsPerHouer = 0;
         let footer = document.createElement('tr');
-        table.appendChild(footer);
+        tableEl.appendChild(footer);
         let tdEl1 = document.createElement('td');
         footer.appendChild(tdEl1);
         tdEl1.textContent = 'Totals';

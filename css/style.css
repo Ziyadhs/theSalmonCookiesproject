@@ -1,4 +1,208 @@
+/* the sales table */
 table, th, td {
-  border: 5px solid black;
+  border: 5px solid #993d08;
+  width: 250px;
+  height: 50px;
+  font-size: 25px;
+}
+th {
+  color: black;
+  background-color: #993d08c7;
+  font-weight: bold;
 }
 
+/* body */
+body {
+  background-color:rgb(250, 218, 159);
+}
+
+/* header */
+header {
+    text-align: center;
+    font-size: 30px;
+    background:rgb(138, 60, 8);
+    height: 100px;
+}
+nav {
+  width: 1000px;
+  margin: auto;
+}
+nav ul li {
+    display: inline-block;
+    border: solid 2px #fda552;
+    padding: 10px 10px 10px 10px;
+    margin-top: 30px;
+    margin-right: 30px;
+}
+
+/* main */
+main {
+  width: 1000px;
+  margin: auto;
+}
+div{
+  margin-top: 25px;
+  text-align: center;
+}
+div p {
+  font-weight: bold;
+  font-size: 30px;
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+div img {
+  margin-top: 25px;
+  width: 70%;
+  }
+div section {
+  font-size: 20px;
+  height: 250px;
+  overflow: auto;
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+div ul li{
+  font-size: 40px;
+  margin-top: 50px;
+}
+div ul li img {
+  width: 600px;
+  height: 400px;
+  margin-top: 10px;
+}
+
+
+/* footer */
+footer {
+  position:static;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(138, 60, 8);
+  color: white;
+  text-align: center;
+}
+footer p {
+  font-size: 25px;
+  color: white;
+}
+
+/* links */
+a:link {
+  color: #fda552;
+  text-decoration: none;
+  font-size: 25px;
+  text-align: center;
+  background-size: cover;
+  display: auto;
+  height:100px;
+  width:200px;
+  margin-top:5px;
+  margin-left:5px;
+  margin-bottom:5px;
+}
+/* visited link */
+a:visited {
+  color: #fda552;
+}
+/* mouse over link */
+a:hover {
+  color: #da710f;
+}
+/* selected  */
+link
+a:active {
+  color: #993d08;
+}
+
+
+/* slide show in products */
+* {box-sizing:border-box}
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  background-color: black;
+  color: #993d08;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+/* Position the "next button" to the right */
+.next {
+  right: 0px;
+  border-radius: 3px 0 0 3px;
+}
+.prev{
+  left: 0px;
+  border-radius: 3px 0 0 3px;
+}
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+/* Caption text */
+.text {
+  color: #993d08;
+  font-size: 25px;
+  font-weight: bold;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #993d08;
+  font-size: 25px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #d67339;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active, .dot:hover {
+  background-color: #993d08;
+}
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
