@@ -78,17 +78,18 @@ function shops(shopLocation, min, max, avgCookieSale) {
         tdEl3.textContent = this.totalOfDailySoldCoockies;
     }
     
-
     //render the total of total salles in all shops perhour in footer
+    let footerValue;
     function createTableFooter (){
         let totalOfsoldCookiesInAllShopsPerHouer = 0;
         let soldCookiesInAllShopsPerHouer = 0;
         let footer = document.createElement('tr');
+        footerValue = footer;
         tableEl.appendChild(footer);
         let tdEl1 = document.createElement('td');
         footer.appendChild(tdEl1);
         tdEl1.textContent = 'Totals';
-        // row data 
+        //row data 
         for (let i = 0 ; i < workHours.length ; i++) {
             let tdEl2 = document.createElement('td');
             for(let j = 0 ; j < theShopsList.length ; j++){
@@ -103,8 +104,27 @@ function shops(shopLocation, min, max, avgCookieSale) {
         footer.appendChild(tdEl3);
         tdEl3.textContent = totalOfsoldCookiesInAllShopsPerHouer;
     }
+    //delet function
+    function deletRow() {
+        tableEl.removeChild(footerValue);
+    }
 
-    
+    //form to add new shop
+    let myForm = document.getElementById("form-for-new-shop")
+    myForm.addEventListener('submit', addNewShop)
+    function addNewShop(event) {
+        event.preventDefault();
+        let shopLocNameEl = event.target.shopLocNameEl.value;
+        let min = event.target.min.value;
+        let max = event.target.max.value;
+        let avg = event.target.avg.value;
+        let theNewShop = new shops(shopLocNameEl, min, max, avg);
+        theNewShop.getRandomCustomersNum();
+        theNewShop.getSoldCookiesPerHouer();
+        deletRow();
+        theNewShop.render();
+        createTableFooter ();
+    }
     
     //locations objects
     let seattle = new shops('Seattle', 23, 65, 6.3);
@@ -120,7 +140,7 @@ function shops(shopLocation, min, max, avgCookieSale) {
         theShopsList[i].render();
     }
     createTableFooter ();
-
+    
 
 
 
